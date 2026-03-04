@@ -1,0 +1,142 @@
+# PROJECT SHEET — Hệ thống Phân tích Lượng mưa Việt Nam
+## Thay NV1–NV6 bằng tên thật. Cột màu vàng = Actual (điền sau khi làm xong)
+
+| Sprint | Module | ID | Use Case | Actors | Phase | PIC | Status | Plan Start | Plan End | Actual Start | Actual End | Estimate Weight (SP) | Actual Effort (h) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 1. User Management | UC-001 | Đăng ký tài khoản | User, System | SRS | NV1 | To Do | 03/03/2026 | 04/03/2026 | | | 2 | |
+| 1 | 1. User Management | UC-001 | Đăng ký tài khoản | User, System | SDD | NV1 | To Do | 04/03/2026 | 04/03/2026 | | | 1 | |
+| 1 | 1. User Management | UC-001 | Đăng ký tài khoản | User, System | BE + UT | NV1 | To Do | 04/03/2026 | 06/03/2026 | | | 5 | |
+| 1 | 1. User Management | UC-001 | Đăng ký tài khoản | User, System | FE | NV1 | To Do | 06/03/2026 | 07/03/2026 | | | 3 | |
+| 1 | 1. User Management | UC-001 | Đăng ký tài khoản | User, System | Acceptance Test | NV6 | To Do | 08/03/2026 | 08/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 1 | 1. User Management | UC-002 | Xác nhận OTP email (đăng ký) | User, System | SRS | NV1 | To Do | 05/03/2026 | 05/03/2026 | | | 1 | |
+| 1 | 1. User Management | UC-002 | Xác nhận OTP email (đăng ký) | User, System | SDD | NV1 | To Do | 05/03/2026 | 05/03/2026 | | | 1 | |
+| 1 | 1. User Management | UC-002 | Xác nhận OTP email (đăng ký) | User, System | BE + UT | NV1 | To Do | 05/03/2026 | 07/03/2026 | | | 4 | |
+| 1 | 1. User Management | UC-002 | Xác nhận OTP email (đăng ký) | User, System | FE | NV1 | To Do | 07/03/2026 | 08/03/2026 | | | 3 | |
+| 1 | 1. User Management | UC-002 | Xác nhận OTP email (đăng ký) | User, System | Acceptance Test | NV6 | To Do | 09/03/2026 | 09/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 1 | 1. User Management | UC-003 | Đăng nhập | User, System | SRS | NV1 | To Do | 03/03/2026 | 03/03/2026 | | | 1 | |
+| 1 | 1. User Management | UC-003 | Đăng nhập | User, System | SDD | NV1 | To Do | 03/03/2026 | 03/03/2026 | | | 1 | |
+| 1 | 1. User Management | UC-003 | Đăng nhập | User, System | BE + UT | NV1 | To Do | 03/03/2026 | 05/03/2026 | | | 3 | |
+| 1 | 1. User Management | UC-003 | Đăng nhập | User, System | FE | NV1 | To Do | 05/03/2026 | 06/03/2026 | | | 2 | |
+| 1 | 1. User Management | UC-003 | Đăng nhập | User, System | Acceptance Test | NV6 | To Do | 08/03/2026 | 08/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 1 | 1. User Management | UC-004 | Quên mật khẩu / Reset OTP | User, System | SRS | NV1 | To Do | 06/03/2026 | 06/03/2026 | | | 2 | |
+| 1 | 1. User Management | UC-004 | Quên mật khẩu / Reset OTP | User, System | SDD | NV1 | To Do | 06/03/2026 | 06/03/2026 | | | 1 | |
+| 1 | 1. User Management | UC-004 | Quên mật khẩu / Reset OTP | User, System | BE + UT | NV1 | To Do | 07/03/2026 | 08/03/2026 | | | 4 | |
+| 1 | 1. User Management | UC-004 | Quên mật khẩu / Reset OTP | User, System | FE | NV1 | To Do | 08/03/2026 | 09/03/2026 | | | 3 | |
+| 1 | 1. User Management | UC-004 | Quên mật khẩu / Reset OTP | User, System | Acceptance Test | NV6 | To Do | 10/03/2026 | 10/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 1 | 1. User Management | UC-005 | Cập nhật ảnh đại diện (URL) | User | SRS | NV1 | To Do | 08/03/2026 | 08/03/2026 | | | 1 | |
+| 1 | 1. User Management | UC-005 | Cập nhật ảnh đại diện (URL) | User | SDD | NV1 | To Do | 08/03/2026 | 08/03/2026 | | | 1 | |
+| 1 | 1. User Management | UC-005 | Cập nhật ảnh đại diện (URL) | User | BE + UT | NV1 | To Do | 09/03/2026 | 09/03/2026 | | | 2 | |
+| 1 | 1. User Management | UC-005 | Cập nhật ảnh đại diện (URL) | User | FE | NV1 | To Do | 09/03/2026 | 10/03/2026 | | | 3 | |
+| 1 | 1. User Management | UC-005 | Cập nhật ảnh đại diện (URL) | User | Acceptance Test | NV6 | To Do | 11/03/2026 | 11/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 1 | 2. Dashboard & Rainfall | UC-006 | Xem dashboard + biểu đồ lượng mưa | User | SRS | NV2 | To Do | 03/03/2026 | 04/03/2026 | | | 2 | |
+| 1 | 2. Dashboard & Rainfall | UC-006 | Xem dashboard + biểu đồ lượng mưa | User | SDD | NV2 | To Do | 04/03/2026 | 04/03/2026 | | | 2 | |
+| 1 | 2. Dashboard & Rainfall | UC-006 | Xem dashboard + biểu đồ lượng mưa | User | BE + UT | NV2 | To Do | 05/03/2026 | 07/03/2026 | | | 5 | |
+| 1 | 2. Dashboard & Rainfall | UC-006 | Xem dashboard + biểu đồ lượng mưa | User | FE | NV2 | To Do | 07/03/2026 | 09/03/2026 | | | 6 | |
+| 1 | 2. Dashboard & Rainfall | UC-006 | Xem dashboard + biểu đồ lượng mưa | User | Acceptance Test | NV6 | To Do | 10/03/2026 | 10/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 1 | 2. Dashboard & Rainfall | UC-007 | Xem lịch sử lượng mưa (phân trang) | User | SRS | NV2 | To Do | 07/03/2026 | 07/03/2026 | | | 1 | |
+| 1 | 2. Dashboard & Rainfall | UC-007 | Xem lịch sử lượng mưa (phân trang) | User | SDD | NV2 | To Do | 07/03/2026 | 07/03/2026 | | | 1 | |
+| 1 | 2. Dashboard & Rainfall | UC-007 | Xem lịch sử lượng mưa (phân trang) | User | BE + UT | NV2 | To Do | 08/03/2026 | 09/03/2026 | | | 4 | |
+| 1 | 2. Dashboard & Rainfall | UC-007 | Xem lịch sử lượng mưa (phân trang) | User | FE | NV2 | To Do | 09/03/2026 | 10/03/2026 | | | 3 | |
+| 1 | 2. Dashboard & Rainfall | UC-007 | Xem lịch sử lượng mưa (phân trang) | User | Acceptance Test | NV6 | To Do | 11/03/2026 | 11/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 1 | 2. Dashboard & Rainfall | UC-008 | Lọc dữ liệu mưa theo ngày bắt đầu / kết thúc | User | SRS | NV2 | To Do | 09/03/2026 | 09/03/2026 | | | 1 | |
+| 1 | 2. Dashboard & Rainfall | UC-008 | Lọc dữ liệu mưa theo ngày bắt đầu / kết thúc | User | SDD | NV2 | To Do | 09/03/2026 | 09/03/2026 | | | 1 | |
+| 1 | 2. Dashboard & Rainfall | UC-008 | Lọc dữ liệu mưa theo ngày bắt đầu / kết thúc | User | BE + UT | NV2 | To Do | 10/03/2026 | 11/03/2026 | | | 3 | |
+| 1 | 2. Dashboard & Rainfall | UC-008 | Lọc dữ liệu mưa theo ngày bắt đầu / kết thúc | User | FE | NV2 | To Do | 11/03/2026 | 12/03/2026 | | | 2 | |
+| 1 | 2. Dashboard & Rainfall | UC-008 | Lọc dữ liệu mưa theo ngày bắt đầu / kết thúc | User | Acceptance Test | NV6 | To Do | 13/03/2026 | 13/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 2 | 3. Orders & Payment | UC-009 | Xem bảng giá gói dịch vụ | User | SRS | NV3 | To Do | 10/03/2026 | 10/03/2026 | | | 1 | |
+| 2 | 3. Orders & Payment | UC-009 | Xem bảng giá gói dịch vụ | User | SDD | NV3 | To Do | 10/03/2026 | 10/03/2026 | | | 1 | |
+| 2 | 3. Orders & Payment | UC-009 | Xem bảng giá gói dịch vụ | User | FE | NV3 | To Do | 11/03/2026 | 12/03/2026 | | | 3 | |
+| 2 | 3. Orders & Payment | UC-009 | Xem bảng giá gói dịch vụ | User | Acceptance Test | NV6 | To Do | 13/03/2026 | 13/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 2 | 3. Orders & Payment | UC-010 | Tạo đơn hàng thanh toán (Pending) | User, System | SRS | NV3 | To Do | 11/03/2026 | 11/03/2026 | | | 2 | |
+| 2 | 3. Orders & Payment | UC-010 | Tạo đơn hàng thanh toán (Pending) | User, System | SDD | NV3 | To Do | 11/03/2026 | 12/03/2026 | | | 2 | |
+| 2 | 3. Orders & Payment | UC-010 | Tạo đơn hàng thanh toán (Pending) | User, System | BE + UT | NV3 | To Do | 12/03/2026 | 14/03/2026 | | | 6 | |
+| 2 | 3. Orders & Payment | UC-010 | Tạo đơn hàng thanh toán (Pending) | User, System | FE | NV3 | To Do | 14/03/2026 | 15/03/2026 | | | 4 | |
+| 2 | 3. Orders & Payment | UC-010 | Tạo đơn hàng thanh toán (Pending) | User, System | Acceptance Test | NV6 | To Do | 16/03/2026 | 16/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 2 | 3. Orders & Payment | UC-011 | Xác nhận thanh toán → nâng cấp Pro | User, System | SRS | NV3 | To Do | 13/03/2026 | 13/03/2026 | | | 2 | |
+| 2 | 3. Orders & Payment | UC-011 | Xác nhận thanh toán → nâng cấp Pro | User, System | SDD | NV3 | To Do | 13/03/2026 | 13/03/2026 | | | 1 | |
+| 2 | 3. Orders & Payment | UC-011 | Xác nhận thanh toán → nâng cấp Pro | User, System | BE + UT | NV3 | To Do | 14/03/2026 | 15/03/2026 | | | 5 | |
+| 2 | 3. Orders & Payment | UC-011 | Xác nhận thanh toán → nâng cấp Pro | User, System | FE | NV3 | To Do | 15/03/2026 | 16/03/2026 | | | 3 | |
+| 2 | 3. Orders & Payment | UC-011 | Xác nhận thanh toán → nâng cấp Pro | User, System | Acceptance Test | NV6 | To Do | 17/03/2026 | 17/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 2 | 3. Orders & Payment | UC-012 | Gửi email biên lai sau nâng cấp Pro | System | SRS | NV3 | To Do | 15/03/2026 | 15/03/2026 | | | 1 | |
+| 2 | 3. Orders & Payment | UC-012 | Gửi email biên lai sau nâng cấp Pro | System | BE + UT | NV3 | To Do | 15/03/2026 | 16/03/2026 | | | 3 | |
+| 2 | 3. Orders & Payment | UC-012 | Gửi email biên lai sau nâng cấp Pro | System | Acceptance Test | NV6 | To Do | 17/03/2026 | 17/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 2 | 4. AI Forecast | UC-013 | Chọn vùng và tháng để dự báo mưa | User (Pro) | SRS | NV4 | To Do | 10/03/2026 | 11/03/2026 | | | 2 | |
+| 2 | 4. AI Forecast | UC-013 | Chọn vùng và tháng để dự báo mưa | User (Pro) | SDD | NV4 | To Do | 11/03/2026 | 12/03/2026 | | | 2 | |
+| 2 | 4. AI Forecast | UC-013 | Chọn vùng và tháng để dự báo mưa | User (Pro) | BE + UT | NV4 | To Do | 12/03/2026 | 15/03/2026 | | | 8 | |
+| 2 | 4. AI Forecast | UC-013 | Chọn vùng và tháng để dự báo mưa | User (Pro) | FE | NV4 | To Do | 15/03/2026 | 17/03/2026 | | | 5 | |
+| 2 | 4. AI Forecast | UC-013 | Chọn vùng và tháng để dự báo mưa | User (Pro) | Acceptance Test | NV6 | To Do | 18/03/2026 | 18/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 2 | 4. AI Forecast | UC-014 | Tích hợp mô hình AI Prophet (Python) | System | SRS | NV4 | To Do | 12/03/2026 | 12/03/2026 | | | 2 | |
+| 2 | 4. AI Forecast | UC-014 | Tích hợp mô hình AI Prophet (Python) | System | SDD | NV4 | To Do | 12/03/2026 | 13/03/2026 | | | 3 | |
+| 2 | 4. AI Forecast | UC-014 | Tích hợp mô hình AI Prophet (Python) | System | BE + UT | NV4 | To Do | 13/03/2026 | 17/03/2026 | | | 10 | |
+| 2 | 4. AI Forecast | UC-014 | Tích hợp mô hình AI Prophet (Python) | System | Acceptance Test | NV6 | To Do | 18/03/2026 | 18/03/2026 | | | 2 | |
+| | | | | | | | | | | | | | |
+| 2 | 4. AI Forecast | UC-015 | Hiển thị kết quả dự báo + mức độ rủi ro | User (Pro) | SRS | NV4 | To Do | 16/03/2026 | 16/03/2026 | | | 1 | |
+| 2 | 4. AI Forecast | UC-015 | Hiển thị kết quả dự báo + mức độ rủi ro | User (Pro) | FE | NV4 | To Do | 16/03/2026 | 18/03/2026 | | | 4 | |
+| 2 | 4. AI Forecast | UC-015 | Hiển thị kết quả dự báo + mức độ rủi ro | User (Pro) | Acceptance Test | NV6 | To Do | 19/03/2026 | 19/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 3 | 5. AI Chatbot | UC-016 | Nhập câu hỏi về lượng mưa / dự báo | User (Pro) | SRS | NV5 | To Do | 17/03/2026 | 18/03/2026 | | | 2 | |
+| 3 | 5. AI Chatbot | UC-016 | Nhập câu hỏi về lượng mưa / dự báo | User (Pro) | SDD | NV5 | To Do | 18/03/2026 | 18/03/2026 | | | 2 | |
+| 3 | 5. AI Chatbot | UC-016 | Nhập câu hỏi về lượng mưa / dự báo | User (Pro) | BE + UT | NV5 | To Do | 19/03/2026 | 22/03/2026 | | | 8 | |
+| 3 | 5. AI Chatbot | UC-016 | Nhập câu hỏi về lượng mưa / dự báo | User (Pro) | FE | NV5 | To Do | 22/03/2026 | 25/03/2026 | | | 6 | |
+| 3 | 5. AI Chatbot | UC-016 | Nhập câu hỏi về lượng mưa / dự báo | User (Pro) | Acceptance Test | NV6 | To Do | 26/03/2026 | 26/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 3 | 5. AI Chatbot | UC-017 | Chatbot phân tích intent (vùng + tháng) | System | SRS | NV5 | To Do | 19/03/2026 | 19/03/2026 | | | 2 | |
+| 3 | 5. AI Chatbot | UC-017 | Chatbot phân tích intent (vùng + tháng) | System | SDD | NV5 | To Do | 19/03/2026 | 20/03/2026 | | | 2 | |
+| 3 | 5. AI Chatbot | UC-017 | Chatbot phân tích intent (vùng + tháng) | System | BE + UT | NV5 | To Do | 20/03/2026 | 23/03/2026 | | | 6 | |
+| 3 | 5. AI Chatbot | UC-017 | Chatbot phân tích intent (vùng + tháng) | System | Acceptance Test | NV6 | To Do | 26/03/2026 | 26/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 3 | 5. AI Chatbot | UC-018 | Hiển thị gợi ý câu hỏi nhanh (chip) | User (Pro) | SRS | NV5 | To Do | 22/03/2026 | 22/03/2026 | | | 1 | |
+| 3 | 5. AI Chatbot | UC-018 | Hiển thị gợi ý câu hỏi nhanh (chip) | User (Pro) | FE | NV5 | To Do | 22/03/2026 | 24/03/2026 | | | 3 | |
+| 3 | 5. AI Chatbot | UC-018 | Hiển thị gợi ý câu hỏi nhanh (chip) | User (Pro) | Acceptance Test | NV6 | To Do | 26/03/2026 | 26/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 1 | 6. Admin + Infrastructure | UC-019 | Setup dự án (BaseDAO, web.xml, CSS, DB) | Dev | SDD | NV6 | To Do | 01/03/2026 | 02/03/2026 | | | 3 | |
+| 1 | 6. Admin + Infrastructure | UC-019 | Setup dự án (BaseDAO, web.xml, CSS, DB) | Dev | BE + UT | NV6 | To Do | 01/03/2026 | 03/03/2026 | | | 5 | |
+| 1 | 6. Admin + Infrastructure | UC-019 | Setup dự án (BaseDAO, web.xml, CSS, DB) | Dev | FE | NV6 | To Do | 02/03/2026 | 03/03/2026 | | | 4 | |
+| | | | | | | | | | | | | | |
+| 3 | 6. Admin + Infrastructure | UC-020 | Xem & quản lý danh sách người dùng | Admin | SRS | NV6 | To Do | 22/03/2026 | 22/03/2026 | | | 2 | |
+| 3 | 6. Admin + Infrastructure | UC-020 | Xem & quản lý danh sách người dùng | Admin | SDD | NV6 | To Do | 22/03/2026 | 23/03/2026 | | | 1 | |
+| 3 | 6. Admin + Infrastructure | UC-020 | Xem & quản lý danh sách người dùng | Admin | BE + UT | NV6 | To Do | 23/03/2026 | 25/03/2026 | | | 5 | |
+| 3 | 6. Admin + Infrastructure | UC-020 | Xem & quản lý danh sách người dùng | Admin | FE | NV6 | To Do | 25/03/2026 | 26/03/2026 | | | 4 | |
+| 3 | 6. Admin + Infrastructure | UC-020 | Xem & quản lý danh sách người dùng | Admin | Acceptance Test | NV6 | To Do | 28/03/2026 | 28/03/2026 | | | 1 | |
+| | | | | | | | | | | | | | |
+| 3 | 6. Admin + Infrastructure | UC-021 | Xem toàn bộ đơn hàng + thống kê | Admin | SRS | NV6 | To Do | 24/03/2026 | 24/03/2026 | | | 1 | |
+| 3 | 6. Admin + Infrastructure | UC-021 | Xem toàn bộ đơn hàng + thống kê | Admin | BE + UT | NV6 | To Do | 24/03/2026 | 26/03/2026 | | | 4 | |
+| 3 | 6. Admin + Infrastructure | UC-021 | Xem toàn bộ đơn hàng + thống kê | Admin | FE | NV6 | To Do | 26/03/2026 | 27/03/2026 | | | 3 | |
+| 3 | 6. Admin + Infrastructure | UC-021 | Xem toàn bộ đơn hàng + thống kê | Admin | Acceptance Test | NV6 | To Do | 28/03/2026 | 28/03/2026 | | | 1 | |
+
+---
+
+## Ghi chú
+
+| Cột | Ý nghĩa |
+|---|---|
+| **Estimate Weight (SP)** | Story Points — độ phức tạp ước tính (1 SP ≈ 2–4 giờ) |
+| **Actual Effort (h)** | Số giờ thực tế đã dùng (điền sau khi hoàn thành) |
+| **Actual Start / End** | Ngày thực tế bắt đầu/kết thúc (điền trong lúc làm) |
+| **Status options** | To Do → In Progress → Done → Blocked → Cancel |
+
+## Classes thực tế dự án (tham khảo khi viết SRS/SDD)
+
+| Module | Controllers | DAOs | Models | JSP Files |
+|---|---|---|---|---|
+| User Management | AuthServlet, PasswordResetServlet, ProfileServlet | UserDAO | User | login, register, verifyEmail, forgot_password, reset_password, profile |
+| Dashboard & Rainfall | DashboardServlet | StationDAO, RainfallDataDAO | Station, RainfallData | dashboard |
+| Orders & Payment | PaymentServlet | OrderDAO, ServicePackageDAO | Order, ServicePackage | payment_vnpay, pricing |
+| AI Forecast | ForecastServlet | ForecastDAO | ForecastLog | forecast |
+| AI Chatbot | ChatbotServlet | (dùng lại DAO trên) | (dùng lại Model trên) | chatbot |
+| Admin + Infrastructure | AdminServlet | (dùng lại tất cả) | — | admin, index, about |
+| (Shared) | — | BaseDAO | — | — |
+| (Shared) | — | — | — | style.css, EmailService |

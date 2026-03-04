@@ -1,0 +1,453 @@
+/* ===========================================================
+   admin.css — Airtable/CRM Layout for Admin Panel
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 13px;
+    color: #333;
+    background: #fff;
+    overflow: hidden;
+}
+
+.admin-shell,
+.form-shell {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* ── Top Nav (Red Tab Bar) ── */
+.topnav {
+    flex-shrink: 0;
+    height: 48px;
+    background: #f25c54;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 16px;
+    gap: 2px;
+}
+
+.topnav .brand {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-right: 24px;
+    padding-bottom: 12px;
+}
+
+.topnav a {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    transition: background 0.1s, color 0.1s;
+}
+
+.topnav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.topnav a.active {
+    background: #fff;
+    color: #333;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* ── Toolbar ── */
+.toolbar {
+    flex-shrink: 0;
+    min-height: 44px;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 28px;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.1s;
+}
+
+.tbtn:hover {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.tbtn.active {
+    color: #1976d2;
+    background: #e3f2fd;
+}
+
+.tbtn.grouped {
+    background: #ebe5f6;
+    color: #644a9c;
+    font-weight: 600;
+}
+
+.tbtn.grouped:hover {
+    background: #e0d7f5;
+}
+
+.tbtn.create {
+    color: #fff;
+    background: #f25c54;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.tbtn.create:hover {
+    background: #e04b43;
+}
+
+.toolbar-sep {
+    width: 1px;
+    height: 16px;
+    background: #e0e0e0;
+    margin: 0 4px;
+}
+
+.search-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-wrap input {
+    border: none;
+    background: transparent;
+    padding: 6px 8px 6px 28px;
+    font-size: 13px;
+    color: #333;
+    outline: none;
+    width: 160px;
+}
+
+.search-wrap:before {
+    content: "🔍";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* ── Table wrapper ── */
+.tbl-wrapper {
+    flex: 1;
+    overflow: auto;
+    background: #fff;
+}
+
+.dtable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.dtable thead {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: #fff;
+}
+
+.dtable th {
+    background: #fff;
+    border-bottom: 2px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    padding: 10px 16px;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dtable td {
+    border-bottom: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    padding: 12px 16px;
+    color: #333;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.dtable th.rn,
+.dtable td.rn {
+    width: 40px;
+    text-align: center;
+    color: #999;
+    font-weight: 400;
+    border-right: 1px solid #e0e0e0;
+    padding: 12px 8px;
+}
+
+/* Group Row Header (Dummy) */
+.group-row td {
+    background: #fdfdfd;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 16px;
+}
+
+/* ── Badges / Pills ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.bg-orange {
+    background: #fcebb4;
+    color: #805f15;
+}
+
+.bg-blue {
+    background: #ebf2fb;
+    color: #3d6098;
+}
+
+.bg-purple {
+    background: #ebe5f6;
+    color: #644a9c;
+}
+
+.bg-red {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.bg-green {
+    background: #d1fadf;
+    color: #166534;
+}
+
+.bg-gray {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.act {
+    color: #555;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.1s;
+    display: inline-flex;
+    gap: 4px;
+}
+
+.act:hover {
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* ── Status Bar ── */
+.statusbar {
+    border-top: 1px solid #e0e0e0;
+    background: #fff;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 12px;
+    color: #888;
+    flex-shrink: 0;
+}
+
+.statusbar span {
+    margin-right: auto;
+}
+
+.pgn {
+    display: flex;
+    gap: 4px;
+}
+
+.pgn a,
+.pgn .cur {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #666;
+    text-decoration: none;
+}
+
+.pgn a:hover {
+    background: #f5f5f5;
+}
+
+.pgn .cur {
+    background: #ebe5f6;
+    color: #644a9c;
+    font-weight: 600;
+}
+
+/* ── Forms ── */
+.form-shell {
+    background: #fafafa;
+}
+
+.form-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.fcard {
+    background: #fff;
+    padding: 32px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.fcard h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 24px 0;
+    color: #333;
+}
+
+.fcard h2 .hint {
+    font-size: 14px;
+    color: #888;
+    font-weight: 400;
+}
+
+.fg {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fg label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+.fg input,
+.fg select,
+.fg textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+    color: #333;
+    font-family: inherit;
+    transition: border-color 0.1s;
+}
+
+.fg input:focus,
+.fg select:focus,
+.fg textarea:focus {
+    border-color: #f25c54;
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.hint {
+    font-size: 12px;
+    color: #888;
+}
+
+.btn-save {
+    background: #f25c54;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+.btn-save:hover {
+    background: #e04b43;
+}
+
+.btn-upd {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+.btn-upd:hover {
+    background: #1565c0;
+}
+
+.btn-cancel {
+    margin-left: 12px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pw-wrap {
+    position: relative;
+}
+
+.pw-wrap input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 40px;
+}
+
+.pw-eye {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    cursor: pointer;
+    color: #999;
+}
+
+.alert-err {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #fca5a5;
+}

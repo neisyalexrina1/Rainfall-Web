@@ -1,0 +1,457 @@
+/* ===========================================================
+   cart.css — Modern E-Commerce Storefront
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', -apple-system, sans-serif;
+    color: #111827;
+    background: #fcfcfc;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ── Container ── */
+.store-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ── Header ── */
+.store-header {
+    background: #fff;
+    border-bottom: 1px solid #f3f4f6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+}
+
+.store-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #000;
+}
+
+.cart-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f9fafb;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+    transition: all 0.2s;
+    border: 1px solid #e5e7eb;
+}
+
+.cart-nav:hover {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+}
+
+.badge-count {
+    background: #ef4444;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 4px;
+}
+
+/* ── Hero / Page Title ── */
+.page-header {
+    margin: 48px 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.page-desc {
+    font-size: 16px;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+/* ── Product Grid ── */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.pcard {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #f3f4f6;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.pcard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
+}
+
+.pcard-img {
+    height: 220px;
+    background: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    border-bottom: 1px solid #f3f4f6;
+    color: #d1d5db;
+}
+
+.pcard-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pcard-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #111827;
+}
+
+.pcard-desc {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 16px;
+    flex: 1;
+    line-height: 1.5;
+}
+
+.pcard-price-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.pcard-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.pcard-stock {
+    font-size: 13px;
+    font-weight: 500;
+    background: #d1fae5;
+    color: #065f46;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.pcard-stock.out {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ── Forms inside Card ── */
+.add-form {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.qty-input {
+    width: 60px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    color: #111827;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.qty-input:focus {
+    border-color: #111827;
+}
+
+.btn-add {
+    flex: 1;
+    background: #111827;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    padding: 10px 0;
+}
+
+.btn-add:hover {
+    background: #374151;
+}
+
+.btn-add:disabled {
+    background: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* ── Cart Page ── */
+.cart-wrap {
+    background: #fff;
+    border: 1px solid #f3f4f6;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 80px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.ctable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.ctable th {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6b7280;
+    font-weight: 600;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ctable td {
+    padding: 24px 0;
+    border-bottom: 1px solid #f3f4f6;
+    vertical-align: middle;
+}
+
+.ctable tr:last-child td {
+    border-bottom: none;
+}
+
+.c-prod h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.c-prod span {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.c-price {
+    font-size: 15px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.c-sub {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.btn-text {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.btn-text.update {
+    color: #3b82f6;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.btn-text.update:hover {
+    text-decoration: underline;
+}
+
+.cart-foot {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+.c-total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.c-total span {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.c-total strong {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.5px;
+}
+
+.btn-checkout {
+    background: #111827;
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-checkout:hover {
+    transform: translateY(-2px);
+    background: #1f2937;
+}
+
+/* ── Success Page ── */
+.sg-box {
+    max-width: 500px;
+    margin: 80px auto;
+    text-align: center;
+    background: #fff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 1px solid #f3f4f6;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.sg-icon {
+    width: 80px;
+    height: 80px;
+    background: #d1fae5;
+    color: #059669;
+    font-size: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+.sg-box h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.sg-box p {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.btn-ghost {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #f3f4f6;
+    color: #111827;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.btn-ghost:hover {
+    background: #e5e7eb;
+}
+
+/* ── Alerts & Empty ── */
+.alert-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    font-weight: 500;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.empty-state .icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.empty-state p {
+    color: #6b7280;
+    margin-bottom: 24px;
+}
