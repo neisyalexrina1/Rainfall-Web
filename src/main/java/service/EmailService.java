@@ -1,41 +1,43 @@
 package service;
 
-import jakarta.mail.*;
-import jakarta.mail.internet.*;
-
-import java.util.Properties;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 /**
- * Sends emails via Gmail SMTP.
+ * Sends emails via Google Apps Script Webhook.
  * Used for: registration OTP, order receipt, password reset OTP.
+ * By-passes Render.com SMTP Port 587 block.
  */
 public class EmailService {
 
-    private final String fromEmail = "dominhgiabaobmg@gmail.com";
-    private final String password = "rqwvnhbhrlzgcpjm"; // Gmail App Password
+    // Apps Script Webhook URL
+    private final String scriptUrl = "https://script.google.com/macros/s/AKfycbzbGLulsus7xT0Kx0_5iLKhzUO7lXNrdaMjv9QLAUHa9LQp9QNTKUwjRJIrIUqe_vXW/exec";
 
-    /** Sends an HTML email. */
+    /** Sends an HTML email via HTTP POST to the Webhook. */
     public void sendHtml(String toEmail, String subject, String htmlBody) throws Exception {
-        Properties props = new Properties();
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "587");
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
+        URL url = java.net.URI.create(scriptUrl).toURL();
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+        conn.setDoOutput(true);
 
-        Session session = Session.getInstance(props,
-                new Authenticator() {
-                    @Override
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(fromEmail, password);
-                    }
-                });
+        // Escape JSON payload
+        String jsonInputString = String.format("{\"to\": \"%s\", \"subject\": \"%s\", \"html\": \"%s\"}",
+                toEmail,
+                subject.replace("\"", "\\\""),
+                htmlBody.replace("\"", "\\\"").replace("\n", "").replace("\r", ""));
 
-        MimeMessage message = new MimeMessage(session);
-        message.setFrom(new InternetAddress(fromEmail));
-        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
-        message.setSubject(subject);
-        message.setContent(htmlBody, "text/html; charset=UTF-8");
-        Transport.send(message);
+        try (OutputStream os = conn.getOutputStream()) {
+            byte[] input = jsonInputString.getBytes(StandardCharsets.UTF_8);
+            os.write(input, 0, input.length);
+        }
+
+        int responseCode = conn.getResponseCode();
+        if (responseCode != HttpURLConnection.HTTP_OK && responseCode != HttpURLConnection.HTTP_MOVED_TEMP) {
+            throw new RuntimeException("Failed to send email via Webhook. HTTP code: " + responseCode);
+        }
     }
 
     /** Sends a password reset OTP email. */
