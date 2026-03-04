@@ -20,7 +20,7 @@
     <properties>
       <!-- JDBC -->
       <property name="jakarta.persistence.jdbc.driver"   value="org.postgresql.Driver"/>
-      <property name="jakarta.persistence.jdbc.url"      value="jdbc:postgresql://db.cokvgdzywatnxqkckwjb.supabase.co:5432/postgres"/>
+      <property name="jakarta.persistence.jdbc.url"      value="jdbc:postgresql://db.cokvgdzywatnxqkckwjb.supabase.co:5432/postgres?sslmode=require"/>
       <property name="jakarta.persistence.jdbc.user"     value="postgres"/>
       <property name="jakarta.persistence.jdbc.password" value="Dominhgiabao12"/>
       <!-- Hibernate -->
