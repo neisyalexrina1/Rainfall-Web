@@ -11,5 +11,9 @@ FROM tomcat:10.1-jdk11
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 # Copy WAR file and rename to ROOT.war to serve at /
 COPY --from=build /app/target/Precipation_Assigment-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
+# Copy CSV data files to Tomcat root directory
+COPY *.csv /usr/local/tomcat/
+# Copy the AI engine script
+COPY *.py /usr/local/tomcat/
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
